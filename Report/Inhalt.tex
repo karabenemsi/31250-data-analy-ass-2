@@ -5,23 +5,44 @@
 \subsection{Attribute features}
 \subsubsection{Quote\_Id}
 \paragraph{Attribute type: nominal}
-The "Quote\_Id" is a customer number. It is neither orderable nor is the number a quantitative value.
-\paragraph{Statistics: } As the attribute is nominal you can not perform any mathematical calculations. The Id ranges between 638 to 434297.
+The "Quote\_Id" is a customer number. It is neither orderable nor is the number a quantitative value. As the id is a unique key, there is no reason to perform any statistic analysis on this attribute.
+
 
 \subsubsection{Quote\_Date}
 \paragraph{Attribute type: interval}
-"Quote\_Date" seems to be at date. These have a specified point of zero. Therefore the type of the attribute is scale.
-\paragraph{Statistics: } 
-\textbf{Missing Values}: None
+"Quote\_Date" seems to be a date. These have a fixed sequence and plus and minus operations can be performed with them.
+ 
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l}
+		\textbf{Statistic} & \textbf{Value}\\\hline
+		Missing Values& None\\\hline
+		Minimum& 02.01.2013\\\hline
+		Maximum& 18.05.2015\\\hline
+		Mean& 23.03.2014\\\hline
+		Std. Dev.& $245$ d\\\hline
+	\end{tabular}
+\end{table}
 
-\textbf{Range}: $02/01/2013 - 18/05/2015$
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Quote_Date.png}
+	\end{center}
+	\caption{Histogramm Quote\_Date}
+\end{figure}
 
 
 \subsubsection{Quote\_Flag}
 \paragraph{Attribute type: nominal (dichotomous)}
 The description of the attributes declares "Quote\_Flag" as information about whether an insurance was purchased. This can be only answered with yes or no.
-\paragraph{Statistics: }
-\textbf{Missing Values}: None
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l}
+		\textbf{Statistic} & \textbf{Value}\\\hline
+		Missing Values& None\\\hline
+	\end{tabular}
+\end{table}
 
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
@@ -32,11 +53,25 @@ The description of the attributes declares "Quote\_Flag" as information about wh
 		\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Quote_Flag.png}
+	\end{center}
+	\caption{Pie Graph Quote\_Flag}
+\end{figure}
+
 
 \subsection{Field\_Info1}
-\paragraph{Attribute type: nominal}
-\paragraph{Statistics: }
-\textbf{Missing Values}: None
+\paragraph{Attribute type: nominal} These characters are not close enough together to asssume, they belong to a ordererd attribute.
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l}
+		\textbf{Statistic} & \textbf{Value}\\\hline
+		Missing Values& None\\\hline
+	\end{tabular}
+\end{table}
+
 
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
@@ -51,11 +86,17 @@ The description of the attributes declares "Quote\_Flag" as information about wh
 	\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Field_Info2.png}
+	\end{center}
+	\caption{Pie Graph Field\_Info1}
+\end{figure}
+
 
 \subsection{Field\_Info2}
 \paragraph{Attribute type: ratio}
-All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precision of 4 decimals. This suggests that the values are on a zero-based scale.
-\paragraph{Statistics: }
+All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precision of 4 decimals. This suggests that these values are on a zero-based scale.
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -70,18 +111,36 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\end{tabular}
 \end{table}
 
-\paragraph{Histrogramm}:
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Field_Info2.png}
+	\end{center}
+	\caption{Histogramm Field\_Info2}
+\end{figure}
 
 \subsection{Field\_Info3}
-\paragraph{Attribute type: interval}
-\paragraph{Statistics: }
+\paragraph{Attribute type: ratio} The values in this attribute are all numeric range in a range of around $1000$. Given the size of the numbers this could be a attribute containing monetary values.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
 		\textbf{Statistic} & \textbf{Value}\\\hline
-		Missing Values& None\\\hline
+			Missing Values& None\\\hline
+		Minimum& $548$\\\hline
+		Maximum& $1487$\\\hline
+		Mean& $950.5195$\\\hline
+		Std. Dev.& $290.62$\\\hline
+		90th Perc. & $901480$\\\hline
+		10th Perc. & $548$ \\		
 	\end{tabular}
 \end{table}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Field_Info3.png}
+	\end{center}
+	\caption{Histogramm Field\_Info3}
+\end{figure}
 
 \subsection{Field\_Info4}
 \paragraph{Attribute type: nominal (dichotomous)} In this Attribute only the values "Y" and "N" appear. Those values are often used as a short version on "Yes" and "No". This field therefore seems to be a yes-no answer.
@@ -102,32 +161,67 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Field_Info4.png}
+	\end{center}
+	\caption{Pie Graph Field\_Info4}
+\end{figure}
+
 \subsection{Coverage\_Info1}
-\paragraph{Attribute type: interval/ordinal}\qquad
+\paragraph{Attribute type: ordinal} This attribute contains values from $1$ to $25$.  These could be different values in a specified order but not a numeric value.
 
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
 		\textbf{Statistic} & \textbf{Value}\\\hline
 		Missing Values& None\\\hline
+		Numeric Outliers & $74$
 	\end{tabular}
 \end{table}
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l|l}
+		\textbf{Value} & \textbf{Absolute Frequency} & \textbf{Relative Frequency}\\\hline
+		-1&$2$&$0.001$\\\hline
+		1&$42$&$0.021$\\\hline
+		2&$81$&$0.0405$\\\hline
+		3&$118$&$0.059$\\\hline
+		4&$149$&$0.0745$\\\hline
+		5&$189$&$0.0945$\\\hline
+		6&$182$&$0.091$\\\hline
+		7&$185$&$0.0925$\\\hline
+		8&$148$&$0.074$\\\hline
+		9&$151$&$0.0755$\\\hline
+		10&$113$&$0.0565$\\\hline
+		11&$106$&$0.053$\\\hline
+		12&$83$&$0.0415$\\\hline
+		13&$67$&$0.0335$\\\hline
+		14&$62$&$0.031$\\\hline
+		15&$53$&$0.0265$\\\hline
+		16&$49$&$0.0245$\\\hline
+		17&$35$&$0.0175$\\\hline
+		18&$37$&$0.0185$\\\hline
+		19&$19$&$0.0095$\\\hline
+		20&$18$&$0.009$\\\hline
+		21&$19$&$0.0095$\\\hline
+		22&$18$&$0.009$\\\hline
+		23&$12$&$0.006$\\\hline
+		24&$11$&$0.0055$\\\hline
+		25&$51$&$0.0255$
+	\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Coverage_Info1.png}
+	\end{center}
+	\caption{Histogramm Coverage\_Info1}
+\end{figure}
 
 \subsection{Coverage\_Info2}
-\paragraph{Attribute type: interval/ordinal}
-\paragraph{Statistics: }
-\begin{table}[H]
-	\renewcommand{\arraystretch}{1.25}
-	\begin{tabular}{l|l}
-		\textbf{Statistic} & \textbf{Value}\\\hline
-		Missing Values& None\\\hline
-	\end{tabular}
-\end{table}
-
-\subsection{Coverage\_Info3}
-\paragraph{Attribute type: ordinal}
-Alphabet, is a order
-\qquad
+\paragraph{Attribute type: ordinal}As before, this attribute contains values from $1$ to $25$.  These could be different values in a specified order but not a numeric value but we only got datapoints with values at $1$,$2$, $22$ and $25$, which is quite interesting as only $3$ customers selected value $1$
 
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
@@ -140,20 +234,54 @@ Alphabet, is a order
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l|l}
 		\textbf{Value} & \textbf{Absolute Frequency} & \textbf{Relative Frequency}\\\hline
-E&$673$&$0.3365$\\\hline
-D&$388$&$0.194$\\\hline
-G&$245$&$0.1225$\\\hline
-K&$229$&$0.1145$\\\hline
-F&$221$&$0.1105$\\\hline
-A&$116$&$0.058$\\\hline
-J&$110$&$0.055$\\\hline
-I&$7$&$0.0035$\\\hline
-B&$4$&$0.002$\\\hline
-C&$3$&$0.0015$\\\hline
-H&$2$&$0.001$\\\hline
-L&$2$&$0.001$
+		1&$3$&$0.0015$\\\hline
+		2&$125$&$0.0625$\\\hline
+		22&$1620$&$0.81$\\\hline
+		25&$252$&$0.126$\\\hline
 	\end{tabular}
 \end{table}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Coverage_Info2.png}
+	\end{center}
+	\caption{Histogramm Coverage\_Info2}
+\end{figure}
+
+\subsection{Coverage\_Info3}
+\paragraph{Attribute type: ordinal} This field contains letters from the beginning of the alphabet. This indicates for these values to be ordered in that order.
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l}
+		\textbf{Statistic} & \textbf{Value}\\\hline
+		Missing Values& None\\\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l|l}
+		\textbf{Value} & \textbf{Absolute Frequency} & \textbf{Relative Frequency}\\\hline
+		A&$116$&$0.058$\\\hline
+		B&$4$&$0.002$\\\hline
+		C&$3$&$0.0015$\\\hline
+		D&$388$&$0.194$\\\hline
+		E&$673$&$0.3365$\\\hline
+		F&$221$&$0.1105$\\\hline
+		G&$245$&$0.1225$\\\hline
+		H&$2$&$0.001$\\\hline
+		I&$7$&$0.0035$\\\hline
+		J&$110$&$0.055$\\\hline
+		K&$229$&$0.1145$\\\hline
+		L&$2$&$0.001$
+	\end{tabular}
+\end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Coverage_Info3.png}
+	\end{center}
+	\caption{Histogramm Coverage\_Info3}
+\end{figure}
 
 \subsection{Sales\_Info1}
 \paragraph{Attribute type: nominal (dichotomous)}
@@ -173,9 +301,15 @@ L&$2$&$0.001$
 		0&$510$&$0.255$
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Sales_Info1.png}
+	\end{center}
+	\caption{Pie Graph Sales\_Info1}
+\end{figure}
 
 \subsection{Sales\_Info2}
-\paragraph{Attribute type: ordinal} prop missing 1
+\paragraph{Attribute type: ordinal} This Attributes contains numbers from $2$ to $5$. Probably, the provided data is missing the value $1$. With that value these could be values ordered from $1$ to $5$.
 \qquad
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
@@ -188,15 +322,21 @@ L&$2$&$0.001$
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l|l}
 		\textbf{Value} & \textbf{Absolute Frequency} & \textbf{Relative Frequency}\\\hline
-		5&$1093$&$0.5465$\\\hline
+		2&$93$&$0.0465$\\\hline
 		3&$519$&$0.2595$\\\hline
 		4&$295$&$0.1475$\\\hline
-		2&$93$&$0.0465$
+		5&$1093$&$0.5465$
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Sales_Info2.png}
+	\end{center}
+	\caption{Histogramm Sales\_Info2}
+\end{figure}
 
 \subsection{Sales\_Info3}
-\paragraph{Attribute type: ordinal} with missing values 0 - 25
+\paragraph{Attribute type: ordinal} Like Coverage\_Info1 this is a ordinal attribute, but we are missing some values inside the provided range.
 
 \qquad
 \begin{table}[H]
@@ -206,10 +346,16 @@ L&$2$&$0.001$
 		Missing Values& None\\\hline
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Sales_Info3.png}
+	\end{center}
+	\caption{Histogramm Sales\_Info3}
+\end{figure}
 
 \subsection{Sales\_Info4}
-\paragraph{Attribute type: nominal} Is only letters sems no order
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal} These letters seem to have no recognisable order.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -231,20 +377,39 @@ L&$2$&$0.001$
 	\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Sales_Info4.png}
+	\end{center}
+	\caption{Pie Graph Sales\_Info4}
+\end{figure}
+
 \subsection{Sales\_Info5}
-\paragraph{Attribute type: ration} prop something with money
-\paragraph{Statistics: }
+\paragraph{Attribute type: ratio} The values in this attribute are distributed very evenly and range in a big range. Given the size of the numbers this could be a attribute containing monetary values.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
 		\textbf{Statistic} & \textbf{Value}\\\hline
 		Missing Values& None\\\hline
+		Minimum& $1$\\\hline
+		Maximum& $67162$\\\hline
+		Mean& $33785.54$\\\hline
+		Std. Dev.& $18863.43$\\\hline
+		90th Perc. & $59741.7$\\\hline
+		10th Perc. & $7828.9$ \\		
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Sales_Info5.png}
+	\end{center}
+	\caption{Histogramm Sales\_Info5}
+\end{figure}
 
 \subsection{Personal\_Info1}
-\paragraph{Attribute type: nominal (dichotomous)}
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal (dichotomous)}\quad
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -261,9 +426,16 @@ L&$2$&$0.001$
 	\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Personal_Info1.png}
+	\end{center}
+	\caption{Pie Graph Personal\_Info1}
+\end{figure}
+
 \subsection{Personal\_Info2}
-\paragraph{Attribute type: ordinal} missing values
-\paragraph{Statistics: }
+\paragraph{Attribute type: ordinal} Like Coverage\_Info1, this attribute probably also contains ordered values, but in the range between $1$ and $25$. And the value $-1$ means "no answer". 
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -271,10 +443,16 @@ L&$2$&$0.001$
 		Missing Values& None\\\hline
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Personal_Info2.png}
+	\end{center}
+	\caption{Histogramm Personal\_Info2}
+\end{figure}
 
 \subsection{Personal\_Info3}
-\paragraph{Attribute type: nominal} two letter combination
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal} These two letter combinations could be order in a alphabetic order, but they seem to start at a random place inside the alphabet. Therefore this attribute will be treated as nominal.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -322,14 +500,22 @@ L&$2$&$0.001$
 	\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Personal_Info3.png}
+	\end{center}
+	\caption{Pie Graph Personal\_Info3}
+\end{figure}
+
 \subsection{Personal\_Info4}
-\paragraph{Attribute type: nominal (dichotomous)}
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal (dichotomous)} \quad All those values are $0$ except for one, which is $1$.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
 		\textbf{Statistic} & \textbf{Value}\\\hline
 		Missing Values& None\\\hline
+		Outliers & $1$
 	\end{tabular}
 \end{table}
 \begin{table}[H]
@@ -341,15 +527,27 @@ L&$2$&$0.001$
 	\end{tabular}
 \end{table}
 
+
 \subsection{Personal\_Info5}
-\paragraph{Attribute type: ordinal} most infos missing
-\paragraph{Statistics: }
-\paragraph{Missing Values}: $966$
+\paragraph{Attribute type: ordinal}This Attribute has no value in a lot of Cases. This Attribute could have up to 5 different, ordered values ($1$ - $5$). This Attribute will probably not get looked at during prediction analysis.
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l}
+		\textbf{Statistic} & \textbf{Value}\\\hline
+		Missing Values& $966$\\\hline
+	\end{tabular}
+\end{table}
 
 \subsection{Property\_Info1}
 \paragraph{Attribute type: nominal (dichotomous)}
-\paragraph{Statistics: }
-\paragraph{Missing Values}: $1$
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{l|l}
+		\textbf{Statistic} & \textbf{Value}\\\hline
+		Missing Values& $1$\\\hline
+	\end{tabular}
+\end{table}
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l|l}
@@ -359,9 +557,16 @@ L&$2$&$0.001$
 \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Property_Info1.png}
+	\end{center}
+	\caption{Pie Graph Property\_Info1}
+\end{figure}
+
 \subsection{Property\_Info2}
-\paragraph{Attribute type: nominal}
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal} All those values are $0$
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -370,9 +575,10 @@ L&$2$&$0.001$
 	\end{tabular}
 \end{table}
 
+
 \subsection{Property\_Info3}
 \paragraph{Attribute type: nominal} random letters
-\paragraph{Statistics: }
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -401,10 +607,16 @@ L&$2$&$0.001$
 		G&$2$&$0.001$
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Property_Info3.png}
+	\end{center}
+	\caption{Pie Graph Property\_Info3}
+\end{figure}
 
 \subsection{Property\_Info4}
 \paragraph{Attribute type: nominal (dichotomous)}
-\paragraph{Statistics: }
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -420,10 +632,16 @@ L&$2$&$0.001$
 		0&$636$&$0.318$
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Property_Info4.png}
+	\end{center}
+	\caption{Pie Graph Property\_Info4}
+\end{figure}
 
 \subsection{Property\_Info5}
-\paragraph{Attribute type: interval}
-\paragraph{Statistics: }
+\paragraph{Attribute type: ordinal} This Attribute too contains values from $1$ to $25$. I defined those as ordinal before.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -431,32 +649,54 @@ L&$2$&$0.001$
 		Missing Values& None\\\hline
 	\end{tabular}
 \end{table}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Property_Info5.png}
+	\end{center}
+	\caption{Histogramm Property\_Info5}
+\end{figure}
 
 \subsection{Geographic\_Info1}
-\paragraph{Attribute type: ordinal}
-\paragraph{Statistics: }
+\paragraph{Attribute type: ordinal} This Attribute too contains values from $1$ to $25$. I defined those as ordinal before.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
 		\textbf{Statistic} & \textbf{Value}\\\hline
 		Missing Values& None\\\hline
+		Ouliers & 58
 	\end{tabular}
 \end{table}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Geographic_Info1.png}
+	\end{center}
+	\caption{Histogramm Geographic\_Info1}
+\end{figure}
 
 \subsection{Geographic\_Info2}
-\paragraph{Attribute type: interval}
-\paragraph{Statistics: }
+\paragraph{Attribute type: ordinal} This Attribute too contains values from $1$ to $25$. I defined those as ordinal before.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
 		\textbf{Statistic} & \textbf{Value}\\\hline
-		Missing Values& None\\\hline
+		Missing Values& None\\\hline		
 	\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Histo_Geographic_Info2.png}
+	\end{center}
+	\caption{Histogramm Geographic\_Info2}
+\end{figure}
+
 \subsection{Geographic\_Info3}
-\paragraph{Attribute type: nominal} probably is pullshit, could be info
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal} These values are very interessting. They could belong to a ordered attribute like "Personal\_Info2". Nevertheless, it is defined as nominal because too many values are missing.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -468,14 +708,14 @@ L&$2$&$0.001$
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l|l}
 		\textbf{Value} & \textbf{Absolute Frequency} & \textbf{Relative Frequency}\\\hline
-		-1&$1942$&$0.971$\\hline
+		-1&$1942$&$0.971$\\\hline
 		25&$58$&$0.029$
 	\end{tabular}
 \end{table}
 
 \subsection{Geographic\_Info4}
-\paragraph{Attribute type: nominal (dichotomous)}
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal (dichotomous)}\quad
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -491,10 +731,16 @@ L&$2$&$0.001$
 		Y&$39$&$0.0195$
 	\end{tabular}
 \end{table}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Geographic_Info4.png}
+	\end{center}
+	\caption{Pie Graph Geographic\_Info4}
+\end{figure}
 
 \subsection{Geographic\_Info5}
-\paragraph{Attribute type: nominal} Could be states
-\paragraph{Statistics: }
+\paragraph{Attribute type: nominal} These values could be the states California, New Jersey, Texas and Illinois. They also could represent any other value and don't have any specific order.
+
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{l|l}
@@ -513,33 +759,30 @@ L&$2$&$0.001$
 	\end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{Pie_Geographic_Info5.png}
+	\end{center}
+	\caption{Pie Graph Geographic\_Info5}
+\end{figure}
+
+\subsection{Interesting Attributes}
+
+\paragraph{Field\_Info3} All values in this attribute are either on the side or in the middle of the range. 
+
+\paragraph{Field\_Info4} Normal distribution, but there is a peak at the end.
+
+\paragraph{Coverage\_Info2} On this attribute we only have datapoints with four different values allthough the range of those values suggets 25 options have been available.
+
+\paragraph{Geographic\_Info2 \& Property\_Info 5} Both of these values show a  even distribution with a spike at the begin of their ranges.
+
+\paragraph{Personal\_Info3} Almost $50 \text{\%}$ of the values are "ZA".
+\paragraph{Property\_Info2} All values are $0$
+\paragraph{Personal\_Info4} All values are $0$ except for one $1$
+
 \section{Data Preprocessing}
 
 \section{Summary}
-
-
-\section{Projektinhalt}
-\subsection{Aktivitäten}
-\begin{table}[H]
-    \renewcommand{\arraystretch}{1.05}
-    \begin{center}
-        \begin{tabular}{l|l}
-            \hline
-            \textbf{ID} & \textbf{Aktivität}\\\hline
-            A & Projektmanager\\ \hline
-        \end{tabular}
-        \caption{Aktivitäten im Projekt}
-    \end{center}
-\end{table}
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=0.8\textwidth]{OBS.png}
-    \end{center}
-    \caption{Organisation-Breakdown-Strukture}
-\end{figure}
-
-
 
 
 
