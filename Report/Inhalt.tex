@@ -61,7 +61,7 @@ The description of the attributes declares "Quote\_Flag" as information about wh
 \end{figure}
 
 
-\subsection{Field\_Info1}
+\subsubsection{Field\_Info1}
 \paragraph{Attribute type: nominal} These characters are not close enough together to asssume, they belong to a ordererd attribute.
 
 \begin{table}[H]
@@ -94,7 +94,7 @@ The description of the attributes declares "Quote\_Flag" as information about wh
 \end{figure}
 
 
-\subsection{Field\_Info2}
+\subsubsection{Field\_Info2}
 \paragraph{Attribute type: ratio}
 All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precision of 4 decimals. This suggests that these values are on a zero-based scale.
 \begin{table}[H]
@@ -118,7 +118,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Field\_Info2}
 \end{figure}
 
-\subsection{Field\_Info3}
+\subsubsection{Field\_Info3}
 \paragraph{Attribute type: ratio} The values in this attribute are all numeric range in a range of around $1000$. Given the size of the numbers this could be a attribute containing monetary values.
 
 \begin{table}[H]
@@ -142,7 +142,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Field\_Info3}
 \end{figure}
 
-\subsection{Field\_Info4}
+\subsubsection{Field\_Info4}
 \paragraph{Attribute type: nominal (dichotomous)} In this Attribute only the values "Y" and "N" appear. Those values are often used as a short version on "Yes" and "No". This field therefore seems to be a yes-no answer.
 \qquad
 \begin{table}[H]
@@ -168,7 +168,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Field\_Info4}
 \end{figure}
 
-\subsection{Coverage\_Info1}
+\subsubsection{Coverage\_Info1}
 \paragraph{Attribute type: ordinal} This attribute contains values from $1$ to $25$.  These could be different values in a specified order but not a numeric value.
 
 \begin{table}[H]
@@ -220,7 +220,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Coverage\_Info1}
 \end{figure}
 
-\subsection{Coverage\_Info2}
+\subsubsection{Coverage\_Info2}
 \paragraph{Attribute type: ordinal}As before, this attribute contains values from $1$ to $25$.  These could be different values in a specified order but not a numeric value but we only got datapoints with values at $1$,$2$, $22$ and $25$, which is quite interesting as only $3$ customers selected value $1$
 
 \begin{table}[H]
@@ -248,7 +248,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Coverage\_Info2}
 \end{figure}
 
-\subsection{Coverage\_Info3}
+\subsubsection{Coverage\_Info3}
 \paragraph{Attribute type: ordinal} This field contains letters from the beginning of the alphabet. This indicates for these values to be ordered in that order.
 
 \begin{table}[H]
@@ -283,7 +283,8 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Coverage\_Info3}
 \end{figure}
 
-\subsection{Sales\_Info1}
+\pagebreak
+\subsubsection{Sales\_Info1}
 \paragraph{Attribute type: nominal (dichotomous)}
 \qquad
 \begin{table}[H]
@@ -308,7 +309,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Sales\_Info1}
 \end{figure}
 
-\subsection{Sales\_Info2}
+\subsubsection{Sales\_Info2}
 \paragraph{Attribute type: ordinal} This Attributes contains numbers from $2$ to $5$. Probably, the provided data is missing the value $1$. With that value these could be values ordered from $1$ to $5$.
 \qquad
 \begin{table}[H]
@@ -335,7 +336,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Sales\_Info2}
 \end{figure}
 
-\subsection{Sales\_Info3}
+\subsubsection{Sales\_Info3}
 \paragraph{Attribute type: ordinal} Like Coverage\_Info1 this is a ordinal attribute, but we are missing some values inside the provided range.
 
 \qquad
@@ -353,7 +354,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Sales\_Info3}
 \end{figure}
 
-\subsection{Sales\_Info4}
+\subsubsection{Sales\_Info4}
 \paragraph{Attribute type: nominal} These letters seem to have no recognisable order.
 
 \begin{table}[H]
@@ -384,7 +385,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Sales\_Info4}
 \end{figure}
 
-\subsection{Sales\_Info5}
+\subsubsection{Sales\_Info5}
 \paragraph{Attribute type: ratio} The values in this attribute are distributed very evenly and range in a big range. Given the size of the numbers this could be a attribute containing monetary values.
 
 \begin{table}[H]
@@ -407,7 +408,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Sales\_Info5}
 \end{figure}
 
-\subsection{Personal\_Info1}
+\subsubsection{Personal\_Info1}
 \paragraph{Attribute type: nominal (dichotomous)}\quad
 
 \begin{table}[H]
@@ -433,7 +434,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Personal\_Info1}
 \end{figure}
 
-\subsection{Personal\_Info2}
+\subsubsection{Personal\_Info2}
 \paragraph{Attribute type: ordinal} Like Coverage\_Info1, this attribute probably also contains ordered values, but in the range between $1$ and $25$. And the value $-1$ means "no answer". 
 
 \begin{table}[H]
@@ -450,7 +451,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Personal\_Info2}
 \end{figure}
 
-\subsection{Personal\_Info3}
+\subsubsection{Personal\_Info3}
 \paragraph{Attribute type: nominal} These two letter combinations could be order in a alphabetic order, but they seem to start at a random place inside the alphabet. Therefore this attribute will be treated as nominal.
 
 \begin{table}[H]
@@ -507,7 +508,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Personal\_Info3}
 \end{figure}
 
-\subsection{Personal\_Info4}
+\subsubsection{Personal\_Info4}
 \paragraph{Attribute type: nominal (dichotomous)} \quad All those values are $0$ except for one, which is $1$.
 
 \begin{table}[H]
@@ -528,7 +529,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 \end{table}
 
 
-\subsection{Personal\_Info5}
+\subsubsection{Personal\_Info5}
 \paragraph{Attribute type: ordinal}This Attribute has no value in a lot of Cases. This Attribute could have up to 5 different, ordered values ($1$ - $5$). This Attribute will probably not get looked at during prediction analysis.
 
 \begin{table}[H]
@@ -539,7 +540,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\end{tabular}
 \end{table}
 
-\subsection{Property\_Info1}
+\subsubsection{Property\_Info1}
 \paragraph{Attribute type: nominal (dichotomous)}
 \begin{table}[H]
 	\renewcommand{\arraystretch}{1.25}
@@ -564,7 +565,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Property\_Info1}
 \end{figure}
 
-\subsection{Property\_Info2}
+\subsubsection{Property\_Info2}
 \paragraph{Attribute type: nominal} All those values are $0$
 
 \begin{table}[H]
@@ -576,7 +577,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 \end{table}
 
 
-\subsection{Property\_Info3}
+\subsubsection{Property\_Info3}
 \paragraph{Attribute type: nominal} random letters
 
 \begin{table}[H]
@@ -614,7 +615,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Property\_Info3}
 \end{figure}
 
-\subsection{Property\_Info4}
+\subsubsection{Property\_Info4}
 \paragraph{Attribute type: nominal (dichotomous)}
 
 \begin{table}[H]
@@ -639,7 +640,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Property\_Info4}
 \end{figure}
 
-\subsection{Property\_Info5}
+\subsubsection{Property\_Info5}
 \paragraph{Attribute type: ordinal} This Attribute too contains values from $1$ to $25$. I defined those as ordinal before.
 
 \begin{table}[H]
@@ -657,7 +658,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Property\_Info5}
 \end{figure}
 
-\subsection{Geographic\_Info1}
+\subsubsection{Geographic\_Info1}
 \paragraph{Attribute type: ordinal} This Attribute too contains values from $1$ to $25$. I defined those as ordinal before.
 
 \begin{table}[H]
@@ -676,7 +677,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Geographic\_Info1}
 \end{figure}
 
-\subsection{Geographic\_Info2}
+\subsubsection{Geographic\_Info2}
 \paragraph{Attribute type: ordinal} This Attribute too contains values from $1$ to $25$. I defined those as ordinal before.
 
 \begin{table}[H]
@@ -694,7 +695,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Histogramm Geographic\_Info2}
 \end{figure}
 
-\subsection{Geographic\_Info3}
+\subsubsection{Geographic\_Info3}
 \paragraph{Attribute type: nominal} These values are very interessting. They could belong to a ordered attribute like "Personal\_Info2". Nevertheless, it is defined as nominal because too many values are missing.
 
 \begin{table}[H]
@@ -713,7 +714,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\end{tabular}
 \end{table}
 
-\subsection{Geographic\_Info4}
+\subsubsection{Geographic\_Info4}
 \paragraph{Attribute type: nominal (dichotomous)}\quad
 
 \begin{table}[H]
@@ -738,7 +739,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Geographic\_Info4}
 \end{figure}
 
-\subsection{Geographic\_Info5}
+\subsubsection{Geographic\_Info5}
 \paragraph{Attribute type: nominal} These values could be the states California, New Jersey, Texas and Illinois. They also could represent any other value and don't have any specific order.
 
 \begin{table}[H]
@@ -766,7 +767,9 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 	\caption{Pie Graph Geographic\_Info5}
 \end{figure}
 
-\subsection{Interesting Attributes}
+\subsection{Data Exploration}
+
+\subsubsection{Interresting Attribute Features}
 
 \paragraph{Field\_Info3} All values in this attribute are either on the side or in the middle of the range. 
 
@@ -782,7 +785,7 @@ All values of "Field\_Info2" are numbers between $0$ and $2$ and have a precisio
 
 \subsubsection{Linear Correlations}
 
-There are some interessting correlations in this dataset. Exspecially Geographic\_Info5 seems to have some strong correllations with Field\_Info2 and Coverage\_Info3. Field\_Info1 seems to be correlatted to Field\_Info4 and Field\_Info2 has as negative Correlation with Field\_Info3.
+There are some interesting correlations in this dataset. Especially Geographic\_Info5 seems to have some strong correlations with Field\_Info2 and Coverage\_Info3. Field\_Info1 seems to be correlated to Field\_Info4 and Field\_Info2 has as negative Correlation with Field\_Info3.
 
 \begin{figure}[H]
 	\begin{center}
@@ -794,8 +797,76 @@ There are some interessting correlations in this dataset. Exspecially Geographic
 	\caption{Screenshots Linear Correlation}
 \end{figure}
 
+\subsubsection{Patterns inside the data}
+
+To find patterns inside the data I used KNIME and a local scatter plot linked with the color manager. This allowed me to find some interesting patterns and interrelations. In th following plots the colors are mapped to Geographic\_Info5.
+
+Coverage\_Info1 and Property\_Info5 show a even distribution except for a part in the lower right corner of the plot, where no datapoint can be found if Property\_Info5 is greater than $12$ and Coverage\_Info lower than $7$.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_CI1-PI5.png}
+	\end{center}
+	\caption{Scatter Plot Coverage\_Info1 and Property\_Info5}
+\end{figure}
+
+If a dataset has the value B in Field\_Info2, its Field\_Info1 value will be between $910$ and $960$. Similar rules account for other values, too, as can be seen in the plot below.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_FI1-FI2.png}
+	\end{center}
+	\caption{Scatter Plot Field\_Info1 and Field\_Info2}
+\end{figure}
+
+A interessting grouping can be found with Field\_Info3 and Geographic\_Info2 where if Field\_Info3 is between $4$ and $16$, Geographic\_Info2 will be between $890$ and $1200$ and if it gets greater than $16$ most of Geographic\_Info2 will be at $548$ and at $1487$ when Field\_Info3 is greater than 22. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_FI3-GI2.png}
+	\end{center}
+	\caption{Scatter Plot Field\_Info2 and Geographic\_Info2}
+\end{figure}
+
+Geographic\_Info5 has some interesting patterns with different other Attributes. The first one beeing Field\_Info4. If Geographic\_Info5 is "CA" or "NJ", Field\_Info4 will be "N". Another connection can be found to Field\_Info1 as can be seen below. 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_FI4-GI5.png}
+	\end{center}
+	\caption{Scatter Plot Field\_Info4 and Geographic\_Info5}
+\end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_GI5-FI1.png}
+	\end{center}
+	\caption{Scatter Plot Geographic\_Info5 and Field\_Info5}
+\end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_GI5-GI1.png}
+	\end{center}
+	\caption{Scatter Plot Geographic\_Info5 and Geographic\_Info1}
+\end{figure}
+
+A similar bahavior as between Field\_Info3 and Geographic\_Info2 can be found between Geographic\_Info5 and Geographic\_Info2.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_GI5-GI2.png}
+	\end{center}
+	\caption{Scatter Plot Geographic\_Info5 and Geographic\_Info2}
+\end{figure}
+
+Personal\_Info3 has some correlations with Geographic\_Info5 and Field\_Info1, where when Geographic\_Info5 is "CA", Personal\_Info3 is "B" and Field\_Info1 is "XW".
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Plots/Scatter_PI3-FI1.png}
+	\end{center}
+	\caption{Scatter Plot Geographic\_Info5 and Field\_Info1}
+\end{figure}
+
+
 \section{Data Preprocessing}
-\subsection{Binning of Property\_Info5}
+\subsection{Binning of Property\_Info5}	
 To bin the different values of Property\_Info5 we have to decide how many bins we want to create. To do so we can use the following formula.
 \begin{equation*}
 k = \left \lceil \frac{\max x - \min x}{h} \right \rceil
@@ -817,27 +888,36 @@ With this number of bins, we can use Knime to bin our datapoints. The resulting 
 		\includegraphics[width=0.4\textwidth]{Screen/Screen_Bin_1.png}
 		\includegraphics[width=0.4\textwidth]{Screen/Screen_Bin_2.png}
 		\includegraphics[width=0.4\textwidth]{Screen/Screen_Bin_3.png}
-		
 	\end{center}
 	\caption{Screenshots Binning}
 \end{figure}
 \subsection{Normalization of Sales\_Info5}
+Normalization describes a function to transfer values of different scales or of wide spread and undefinded borders into a common scale with defined endpoints. In this case we use min-max and z-scale normalization. Min-max will scale all values down to a range between $0$ and $1$ using the following formula:
+\begin{equation*}
+X'={\frac {X-X_{\min }}{X_{\max }-X_{\min }}}
+\end{equation*}
+The Z-Score normalization will remove ouliers inside a dataset. This will be done by using the following formula: 
+\begin{equation*}
+X'=\frac{X - \mu}{\sigma}
+\end{equation*}
+Where $\mu$ is the mean and $\sigma$ is the standard deviation.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.4\textwidth]{Screen/Screen_Norm_1.png}
 		\includegraphics[width=0.4\textwidth]{Screen/Screen_Norm_2.png}
 		\includegraphics[width=0.4\textwidth]{Screen/Screen_Norm_3.png}
-		
 	\end{center}
 	\caption{Screenshots Normalization}
 \end{figure}
 \subsection{Discretization of Coverage\_Info1}
+Discretization is a process of transfering continous or wide spread values into discrete counterparts. In our case we will discretize by using equi-width binning.
+ 
 Since the values in Coverage\_Info1 range from 1 to 25, it makes sense to set the range of each category to $6$ and the thresholds for the four categories as follows:
 \begin{align*}
-\text{Basic} &= ]-\infty , 7[\\
-\text{Low} &= ]7 , 13[\\
-\text{Medium} &= ]13 , 19[\\
-\text{High} &= ]19 , \infty[
+\text{Basic} &= ]-\infty , 7[ & 763\quad\text{elements}\\
+\text{Low} &= ]7 , 13[& 786\quad\text{elements}\\
+\text{Medium} &= ]13 , 19[& 303\quad\text{elements}\\
+\text{High} &= ]19 , \infty[& 148\quad\text{elements}
 \end{align*}
 \begin{figure}[H]
 	\begin{center}
@@ -847,6 +927,8 @@ Since the values in Coverage\_Info1 range from 1 to 25, it makes sense to set th
 	\caption{Screenshots Discretization}
 \end{figure}
 \subsection{Binarization of Geographic\_Info5}
+Binarization is a transformation of data features from single attributes into binary vectors. This spreads out one nominal attribute into multiple binary attributes. This process can make classifier algorithms more efficient.
+
 To binarise the Attribute I used the "One to Many" Node in Knime. The result of the binarization can be found inside the attached excel-workbook.
 \begin{figure}[H]
 	\begin{center}
@@ -856,23 +938,20 @@ To binarise the Attribute I used the "One to Many" Node in Knime. The result of 
 	\end{center}
 	\caption{Screenshots Binarization}
 \end{figure}
+\pagebreak
 \section{Summary}
 
-\paragraph{Field\_Info3} All values in this attribute are either on the side or in the middle of the range. 
+During the exploration of the given data I was able to divide the results into three different sections.
+The first of these sections are the peculiarities of the existing data points or their attributes.\\
+With the attributes I could determine some interesting points. Some attributes had large shares of a value. This includes Property\_Info2, where only the value $0$ occurred. Also Personal\_Info4 has only the value $0$ except for one exception which has the value $1$. This is either a data error or an outlier. The attribute Personal\_Info3 is assigned the value "ZA" to almost $50$ %.\\
+Field\_Info3 has an interesting value distribution, since all values are either at the outer edges or in the middle of the value range.\\
+With Field\_Info4 a normal distribution of the values can be observed. The only exception to this is the largest value, which stands out due to a strong increase.\\
+On this Coverage\_Info2 we only have data points with four different values although the range of those values suggest 25 options have been available.\\
+Both, Geographic\_Info2 and Property\_Info5 show a even distribution, but both have a peak at the begin of their ranges, double the volume then the following values.
 
-\paragraph{Field\_Info4} Normal distribution, but there is a peak at the end.
+Some of the provided attributes show a linear correlation to each other.\\ Especially Geographic\_Info5 seems to have a strong correlation with Field\_Info2 and Coverage\_Info3. Field\_Info1 seems to be correlated to Field\_Info4 and Field\_Info2 has as negative Correlation with Field\_Info3.
 
-\paragraph{Coverage\_Info2} On this attribute we only have datapoints with four different values allthough the range of those values suggets 25 options have been available.
-
-\paragraph{Geographic\_Info2 \& Property\_Info 5} Both of these values show a  even distribution with a spike at the begin of their ranges.
-
-\paragraph{Personal\_Info3} Almost $50 \text{\%}$ of the values are "ZA".
-\paragraph{Property\_Info2} All values are $0$
-\paragraph{Personal\_Info4} All values are $0$ except for one $1$
-
-\subsubsection{Linear Correlations}
-
-There are some interessting correlations in this dataset. Exspecially Geographic\_Info5 seems to have some strong correllations with Field\_Info2 and Coverage\_Info3. Field\_Info1 seems to be correlatted to Field\_Info4 and Field\_Info2 has as negative Correlation with Field\_Info3.
+When I did a cross comparison for some attributes, I was able to find some interesting patterns. Very interesting for future sales could be the connection between geographic information and other information as the Geographic\_Info5 has a lot of connection to different other attributes, sometimes even excluding specific values for other attributes. Also the attribute Personal\_Info3 has a correlation with Field\_Info1 and Geographic\_Info5.
 
 
 
